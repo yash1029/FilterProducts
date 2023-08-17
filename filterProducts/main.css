@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+*,
+::before,
+::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(120, 146, 188, 0.078);
+  margin: 0 8px;
+}
+
+#main {
+  width: 95vw;
+  margin: 4em auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5em;
+  font-family: "Poppins", sans-serif;
+  max-width: 1120px;
+}
+
+
+#search-bar {
+  border: 0px;
+  padding: 0.7em;
+  background-color: rgba(120, 146, 188, 0.194);
+  letter-spacing: 1.2px;
+  border-radius: 3px;
+  margin-bottom: 1.5em;
+}
+
+h3 {
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.companies > .company-button {
+  display: block;
+  background-color: transparent;
+  color: rgb(95, 95, 95);
+  border: 0px;
+  letter-spacing: 1px;
+  padding: 0.5em 0.5em;
+  cursor: pointer;
+}
+
+.company-button:hover {
+  color: black;
+}
+
+#product-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em 0.8em;
+}
+
+.product {
+  width: 100%;
+  text-align: center;
+}
+
+.img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.title {
+  color: rgb(80, 112, 160);
+  padding: 0.4em;
+}
+
+.price {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.76);
+}
+
+@media screen and (max-width: 1180px) {
+  #product-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #main {
+    max-width: 1075px;
+  }
+
+  .img {
+    height: 13rem;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  body {
+    margin: 0 20px;
+  }
+  #product-container {
+    grid-template-columns: 1fr;
+  }
+
+  #main {
+    max-width: 745px;
+  }
+
+  .img {
+    height: 18rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #main {
+    flex-direction: column;
+  }
+}
